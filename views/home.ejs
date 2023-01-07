@@ -1,2 +1,52 @@
 <link rel="stylesheet" href="/css/home.css">
-        <h1> Codeial </h1>
+
+<section id="description">
+        <div>
+                <p class="label">
+                        <%=descriptionText%>
+                 </p>
+                 <input type="text" name="desciption" id="descriptionInput" placeholder="<%=descriptionPlaceholder%>" >
+         
+        </div>
+
+</section>
+
+<section id="category-and-duedate">
+        <div>
+                <p class="label">
+                        <%= categoryText%>
+                </p>
+                <select name="category" >
+                                <% for ( let i of categoryList) {%>
+                                      <option name="<%=i%>"><%=i  %> </option> 
+                                <% } %> 
+                        
+
+                </select>
+        </div>
+        <div>
+                <p class="label">
+                        <%= dueDateText %> 
+                </p>
+                <input type="date">
+        </div>
+
+</section>
+
+<section id="buttons">
+        <button class="button" id="addButton">
+            
+                <p>
+                        <i class="fa-solid fa-plus"></i>
+                        <%=button1  %> 
+                </p>
+        </button>
+
+        <button class="button" id="deleteButton">
+                <p>
+                        <i class="fa-solid fa-trash"></i>
+                        <%=button2  %> 
+                </p>
+        </button>
+</section>
+<script src="https://kit.fontawesome.com/cab6a3a90b.js" crossorigin="anonymous"></script>
