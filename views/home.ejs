@@ -1,52 +1,66 @@
 <link rel="stylesheet" href="/css/home.css">
 
-<section id="description">
+<form action="add-task" method="post">
+        <section id="description">
+                <div>
+                        <p class="label">
+                                <%=descriptionText%>
+                         </p>
+                         <input type="text" name="description" id="descriptionInput" placeholder="<%=descriptionPlaceholder%>" required >
+                 
+                </div>
+        
+        </section>
+        
+        <section id="category-and-duedate">
+                <div>
+                        <p class="label">
+                                <%= categoryText%>
+                        </p>
+                        <select name="category" required >
+                                        <% for ( let i of categoryList) {%>
+                                              <option name="<%=i%>"><%=i  %> </option> 
+                                        <% } %> 
+                                
+        
+                        </select>
+                </div>
+                <div>
+                        <p class="label">
+                                <%= dueDateText %> 
+                        </p>
+                        <input type="date" name="date" required>
+                </div>
+        
+        </section>
+        
+        <section id="buttons">
+        
+              
+                <button class="button" id="addButton" >
+                    
+                        <p>
+                                <i class="fa-solid fa-plus"></i>
+                                <%=button1  %> 
+                        </p>
+                </button>
+        
+           
+        
+                <button class="button" id="deleteButton">
+                        <p>
+                                <i class="fa-solid fa-trash"></i>
+                                <%=button2  %> 
+                        </p>
+                </button>
+        
+        </section>
+</form>
+
+
+<form>
         <div>
-                <p class="label">
-                        <%=descriptionText%>
-                 </p>
-                 <input type="text" name="desciption" id="descriptionInput" placeholder="<%=descriptionPlaceholder%>" >
-         
+                
         </div>
-
-</section>
-
-<section id="category-and-duedate">
-        <div>
-                <p class="label">
-                        <%= categoryText%>
-                </p>
-                <select name="category" >
-                                <% for ( let i of categoryList) {%>
-                                      <option name="<%=i%>"><%=i  %> </option> 
-                                <% } %> 
-                        
-
-                </select>
-        </div>
-        <div>
-                <p class="label">
-                        <%= dueDateText %> 
-                </p>
-                <input type="date">
-        </div>
-
-</section>
-
-<section id="buttons">
-        <button class="button" id="addButton">
-            
-                <p>
-                        <i class="fa-solid fa-plus"></i>
-                        <%=button1  %> 
-                </p>
-        </button>
-
-        <button class="button" id="deleteButton">
-                <p>
-                        <i class="fa-solid fa-trash"></i>
-                        <%=button2  %> 
-                </p>
-        </button>
-</section>
+</form>
 <script src="https://kit.fontawesome.com/cab6a3a90b.js" crossorigin="anonymous"></script>
