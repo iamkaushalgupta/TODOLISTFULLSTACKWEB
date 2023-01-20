@@ -7,21 +7,9 @@ routes.use(express.urlencoded())
 
 routes.get('/',homeController.home);
 
-routes.post('/add-task',function(req,res){
+routes.post('/add-task',homeController.addTask)
 
-    TODO.create({
-        description:req.body.description,
-        category:req.body.category,
-        date:req.body.date,
+routes.get('/delete-task', homeController.deleteTask);
 
-    },function(err, newTODO){
-        if(err){
-            console.log(err);
-            return;
-        }
-        res.redirect('back');
-    })
-
-})
 
 module.exports=routes;

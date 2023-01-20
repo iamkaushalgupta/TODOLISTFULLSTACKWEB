@@ -43,6 +43,11 @@ div{
 }
 #deleteButton{
     background-color: rgb(226, 50, 50);
+    border-radius: 8px;
+    width: 150px;
+    text-align: center;
+    color: white;
+    text-decoration: none;
 }
 input,select{
     border: 0px;
